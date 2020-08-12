@@ -1,0 +1,24 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title>
+      ACalle's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let noticia of noticias">
+
+        <ion-card color="dark">
+          <ion-card-header>
+            <ion-card-subtitle>{{noticia.source}}</ion-card-subtitle>
+            <ion-card-title>{{noticia.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
